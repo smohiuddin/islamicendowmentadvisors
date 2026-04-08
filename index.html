@@ -327,11 +327,23 @@
     .founder-header {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 1.25rem;
     }
     .founder-header > div { display: flex; flex-direction: column; gap: 0.2rem; }
+
+    .founder-photo {
+      width: 95px;
+      height: 95px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--gold);
+      flex-shrink: 0;
+      background: var(--gold-pale);
+    }
+
     .advisor-initials {
-      width: 48px; height: 48px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       background: var(--gold-pale);
       border: 1px solid var(--gold);
@@ -358,6 +370,42 @@
       color: var(--gold);
     }
     .founder-card p { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.75; }
+
+    /* Trust band (between founders & contact) */
+    .trust-band {
+      padding: 4.75rem var(--gutter);
+      background:
+        radial-gradient(ellipse 80% 120% at 50% 0%, rgba(212,168,75,0.12) 0%, transparent 55%),
+        linear-gradient(165deg, #242018 0%, var(--ink) 45%, #1a1610 100%);
+      border-top: 1px solid rgba(212,168,75,0.22);
+      border-bottom: 1px solid rgba(212,168,75,0.18);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+    .trust-band-inner {
+      max-width: 40rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .trust-band-label {
+      font-size: clamp(0.95rem, 2.1vw, 1.2rem);
+      letter-spacing: 0.2em;
+      color: var(--gold-light);
+      margin-bottom: 1.35rem;
+    }
+    .trust-statement {
+      font-family: var(--font-display);
+      font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+      font-weight: 400;
+      line-height: 1.55;
+      color: rgba(245,240,232,0.92);
+      letter-spacing: 0.01em;
+    }
+    .trust-statement .trust-org {
+      font-style: italic;
+      font-weight: 600;
+      color: var(--gold-light);
+      text-shadow: 0 0 28px rgba(212,168,75,0.2);
+    }
 
     /* Contact */
     .contact { padding: 7rem var(--gutter); background: var(--parchment); position: relative; overflow: hidden; }
@@ -437,7 +485,7 @@
     <div class="hero-inner">
       <div class="hero-eyebrow">Islamic Endowment Advisors</div>
       <h1 class="hero-title">Establish, grow, and<br><em>sustain your endowment</em></h1>
-      <p class="hero-sub">Islamic Endowment Advisors helps mosques and Islamic organizations across the United States establish, grow, and manage endowment funds.</p>
+      <p class="hero-sub">Islamic Endowment Advisors helps Islamic organizations, schools, and masjids across the United States establish, grow, and manage endowment funds.</p>
       <a href="#contact" class="cta-btn">Request Advisory Services</a>
     </div>
     <div class="hero-ornament" aria-hidden="true">
@@ -556,7 +604,7 @@
 
     <div class="founder-card">
       <div class="founder-header">
-        <div class="advisor-initials">MB</div>
+        <img src="images/motasem.png" alt="Motasem Benothman" class="founder-photo">
         <div>
           <strong>Motasem Benothman</strong>
           <span>Co-Founder</span>
@@ -567,18 +615,18 @@
 
     <div class="founder-card">
       <div class="founder-header">
-        <div class="advisor-initials">AH</div>
+        <img src="images/abduelwahab.png" alt="Abduelwahab Hussein" class="founder-photo">
         <div>
           <strong>Abduelwahab Hussein</strong>
           <span>Co-Founder</span>
         </div>
       </div>
-      <p>Abduelwahab is a Data Scientist at American Express. He holds a B.S. in Mathematics from William &amp; Mary and an M.A. in Statistics from Columbia University.</p>
+      <p>Abduelwahab is a Data Scientist at American Express with previous experience in financial research. He is active in Muppies, ICNYC, and MAS DC. He holds a B.S. in Mathematics from William &amp; Mary and an M.A. in Statistics from Columbia University.</p>
     </div>
 
     <div class="founder-card">
       <div class="founder-header">
-        <div class="advisor-initials">SM</div>
+        <img src="images/safeer.png" alt="Safeer Mohiuddin" class="founder-photo">
         <div>
           <strong>Safeer Mohiuddin</strong>
           <span>Co-Founder</span>
@@ -591,6 +639,15 @@
 </div>
 
 
+  </section>
+
+  <!-- TRUST -->
+
+  <section class="trust-band" aria-label="Organizations we work with">
+    <div class="container trust-band-inner">
+      <div class="section-label trust-band-label">Trusted partners</div>
+      <p class="trust-statement">Trusted by leading Islamic nonprofits, including <span class="trust-org">Muslim Legal Fund of America (MLFA)</span> and <span class="trust-org">Tayba Foundation</span> to help establish and grow their endowments.</p>
+    </div>
   </section>
 
   <!-- CONTACT -->
