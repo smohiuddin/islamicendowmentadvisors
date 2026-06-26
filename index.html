@@ -139,24 +139,6 @@
       max-width: 680px;
       animation: fadeUp 0.9s ease both;
     }
-    .hero-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 2rem;
-      height: 1px;
-      background: var(--gold);
-    }
     .hero-title {
       font-family: var(--font-display);
       font-size: clamp(3rem, 7vw, 5.5rem);
@@ -173,20 +155,6 @@
       max-width: 520px;
       margin-bottom: 2.5rem;
       line-height: 1.75;
-    }
-    .hero-ornament {
-      position: absolute;
-      right: 5vw;
-      top: 50%;
-      transform: translateY(-50%);
-      width: clamp(300px, 38vw, 520px);
-      color: var(--gold);
-      animation: rotateSlow 80s linear infinite;
-      pointer-events: none;
-    }
-    @keyframes rotateSlow {
-      from { transform: translateY(-50%) rotate(0deg); }
-      to   { transform: translateY(-50%) rotate(360deg); }
     }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -410,10 +378,6 @@
     /* Contact */
     .contact { padding: 7rem var(--gutter); background: var(--parchment); position: relative; overflow: hidden; }
     .contact-inner {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 4rem;
-      align-items: center;
       max-width: var(--max-w);
       margin: 0 auto;
     }
@@ -423,12 +387,6 @@
       margin-bottom: 2rem;
       max-width: 460px;
       line-height: 1.75;
-    }
-    .contact-ornament {
-      width: 180px;
-      color: var(--gold);
-      opacity: 0.6;
-      animation: rotateSlow 120s linear infinite reverse;
     }
 
     /* Footer */
@@ -483,27 +441,9 @@
 
   <section class="hero">
     <div class="hero-inner">
-      <div class="hero-eyebrow">Islamic Endowment Advisors</div>
       <h1 class="hero-title">Establish, grow, and<br><em>sustain</em> your endowment</h1>
-      <p class="hero-sub">Islamic Endowment Advisors helps Islamic organizations, schools, and masjids across the United States establish, grow, and manage endowment funds.</p>
-      <a href="#contact" class="cta-btn">Request Advisory Services</a>
-    </div>
-    <div class="hero-ornament" aria-hidden="true">
-      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-        <g opacity="0.18" fill="none" stroke="currentColor" stroke-width="0.8">
-          <polygon points="200,40 360,130 360,270 200,360 40,270 40,130"/>
-          <polygon points="200,70 335,148 335,252 200,330 65,252 65,148"/>
-          <polygon points="200,100 310,166 310,234 200,300 90,234 90,166"/>
-          <circle cx="200" cy="200" r="90"/>
-          <circle cx="200" cy="200" r="60"/>
-          <circle cx="200" cy="200" r="30"/>
-          <line x1="200" y1="40" x2="200" y2="360"/>
-          <line x1="40" y1="130" x2="360" y2="270"/>
-          <line x1="40" y1="270" x2="360" y2="130"/>
-          <line x1="110" y1="80" x2="290" y2="320"/>
-          <line x1="290" y1="80" x2="110" y2="320"/>
-        </g>
-      </svg>
+      <p class="hero-sub">We help Islamic organizations, schools, and masjids across the United States build endowment funds that last.</p>
+      <a href="#contact" class="cta-btn">Get in touch</a>
     </div>
   </section>
 
@@ -513,7 +453,6 @@
 
   <section class="services" id="services">
     <div class="container">
-      <div class="section-label">What We Offer</div>
       <h2 class="section-title">What we offer</h2>
       <div class="offerings">
 
@@ -542,7 +481,7 @@
         <div class="offering-num">02</div>
         <div>
           <h3>Investment Policy Statement</h3>
-          <p class="offering-desc">A custom IPS codifies your endowment's philosophy — turning decisions into durable, documented policy.</p>
+          <p class="offering-desc">A written policy that documents your endowment's goals, risk tolerance, and rules — so decisions are consistent whoever is in the room.</p>
         </div>
       </div>
       <ul class="offering-items">
@@ -560,7 +499,7 @@
         <div class="offering-num">03</div>
         <div>
           <h3>Implementation</h3>
-          <p class="offering-desc">We help you put the plan into practice — with the right resources and the right oversight structure.</p>
+          <p class="offering-desc">We help you put the plan into action — setting up your investment committee and staying involved as the fund grows.</p>
         </div>
       </div>
       <ul class="offering-items">
@@ -580,7 +519,6 @@
   <section class="about" id="about">
     <div class="about-inner">
       <div class="about-text">
-        <div class="section-label">Our Mission</div>
         <h2 class="section-title">Why we exist</h2>
         <p>Islamic Endowment Advisors helps mosques and Islamic organizations across the United States establish, grow, and advise endowment funds — so that generosity compounds across generations.</p>
         <p>Our founders have built investment funds, chaired endowment boards, and spent years studying what it takes for these institutions to thrive. We exist to make that expertise accessible to every masjid and Islamic organization, regardless of size or resources.</p>
@@ -597,7 +535,6 @@
 
   <section class="advisors" id="team">
     <div class="container">
-      <div class="section-label">Our Founders</div>
       <h2 class="section-title">Meet the founders</h2>
       <div class="founder-list">
 
@@ -645,8 +582,7 @@
 
   <section class="trust-band" aria-label="Organizations we work with">
     <div class="container trust-band-inner">
-      <div class="section-label trust-band-label">Trusted partners</div>
-      <p class="trust-statement">Trusted by leading Islamic nonprofits, including <span class="trust-org">Muslim Legal Fund of America (MLFA)</span> and <span class="trust-org">Tayba Foundation</span>, to help establish and grow their endowments.</p>
+      <p class="trust-statement">Working with <span class="trust-org">Muslim Legal Fund of America (MLFA)</span> and <span class="trust-org">Tayba Foundation</span> to establish and grow their endowments.</p>
     </div>
   </section>
 
@@ -655,24 +591,9 @@
   <section class="contact" id="contact">
     <div class="contact-inner">
       <div class="contact-text">
-        <div class="section-label">Get in Touch</div>
         <h2 class="section-title">Get in touch</h2>
-        <p>Whether you're an established endowment, a masjid just getting started, or a community leader with questions — reach out.</p>
+        <p>Whether you're running an established endowment or just getting started — we're happy to talk.</p>
         <a href="mailto:info@islamicendowmentadvisors.org" class="cta-btn">info@islamicendowmentadvisors.org</a>
-      </div>
-      <div class="contact-ornament" aria-hidden="true">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <g opacity="0.15" fill="none" stroke="currentColor" stroke-width="0.7">
-            <polygon points="100,10 190,55 190,145 100,190 10,145 10,55"/>
-            <polygon points="100,30 170,68 170,132 100,170 30,132 30,68"/>
-            <polygon points="100,50 150,80 150,120 100,150 50,120 50,80"/>
-            <circle cx="100" cy="100" r="45"/>
-            <circle cx="100" cy="100" r="25"/>
-            <line x1="100" y1="10" x2="100" y2="190"/>
-            <line x1="10" y1="55" x2="190" y2="145"/>
-            <line x1="10" y1="145" x2="190" y2="55"/>
-          </g>
-        </svg>
       </div>
     </div>
   </section>
